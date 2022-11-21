@@ -1,7 +1,12 @@
 import Card from "../Card";
 import Watch from "../Watch";
+import Button from "../Button";
 
 const Body = () => {
+  function Click() {
+    console.log("oi");
+  }
+
   return (
     <div
       className=" text-blue-600 h-screen w-screen p-6  rounded-sm relative"
@@ -12,7 +17,8 @@ const Body = () => {
       }}
     >
       <Watch userName="Claudionilton" />
-      <Card> TESTE</Card>
+      <Card> TESTE</Card> <br></br>
+      <Button onClick={Click} name="Add" type="button" />
     </div>
   );
 };
