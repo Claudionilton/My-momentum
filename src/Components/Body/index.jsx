@@ -2,7 +2,7 @@ import Card from "../Card";
 import Watch from "../Watch";
 import Button from "../Button";
 
-const Body = () => {
+const Body = ({}) => {
   function Click() {
     console.log("oi");
   }
@@ -16,9 +16,8 @@ const Body = () => {
         backgroundSize: "cover",
       }}
     >
-      <Watch userName="Claudionilton" />
-      <Card> TESTE</Card> <br></br>
-      <Button onClick={Click} name="Add" type="button" />
+      <Watch />
+      <Card />
     </div>
   );
 };
