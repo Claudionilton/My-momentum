@@ -2,26 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-.card {
-  position: relative;
-  background-color: white;
-  border-radius: 8px;
-  padding: 15px;
+.body {
   display: flex;
-  height: 300px;
-  width: 400px;
-  color: rgb(0, 0, 0);
-  font-weight: 700;
+  height: 100vh;
+  justify-content: space-around;
 }
 
-.btn {
-  position: relative;
-  display: inline-flex;
+.gitCard {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 6%;
+  padding: 8px;
+  background-color: rgba(246, 246, 248, 0.5);
 }
-.todo {
-  background-color: white;
+.todoAlign {
+  display: flex;
+  justify-content: flex-end;
   border-radius: 8px;
-  padding: 6px;
-  height: auto;
+  padding: 8px;
+  height: fit-content;
+  font-size: 2rem;
+}
+
+.todo {
+  background-color: rgba(246, 246, 248, 0.5);
+  border-radius: 6%;
+  padding: 15px;
+}
+.closeTodo {
+}
+
+.textAreaTodo {
+  padding: 3px;
+}
+.remove {
+  background-color: #fff;
+  margin: 10px;
+}
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: rgba(10, 1, 191, 0.5);
+  border: 5px solid #000;
+  border-radius: 5%;
+  color: #000;
+  font-size: 60px;
+  justify-content: center;
+  height: 200px;
   width: 400px;
 }

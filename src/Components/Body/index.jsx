@@ -1,23 +1,28 @@
-import Card from "../Card";
+import Todo from "../Todo";
 import Watch from "../Watch";
-import Button from "../Button";
+import "../../index.css";
+import Git from "../FetchGit";
 
-const Body = ({}) => {
-  function Click() {
-    console.log("oi");
-  }
-
+const Body = () => {
   return (
     <div
-      className=" text-blue-600 h-screen w-screen p-6  rounded-sm relative"
+      className="body text-blue-600 "
       style={{
         backgroundImage: "url('https://picsum.photos/1920')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      <Watch />
-      <Card />
+      <div className="gitCard">
+        <Git />
+      </div>
+      <div className="watch">
+        <Watch />
+      </div>
+
+      <div className="todoAlign">
+        <Todo />
+      </div>
     </div>
   );
 };
