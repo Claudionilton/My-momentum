@@ -12,22 +12,31 @@ function Watch() {
   }, []);
   //Transformar as constantes em Objeto
 
-  const hours = formatTime(time.getHours());
-  const minutes = formatTime(time.getMinutes());
-  const seconds = formatTime(time.getSeconds());
-  const day = formatTime(time.getDay() + 1);
-  const month = formatTime(time.getMonth() + 1);
-  const year = formatTime(time.getFullYear());
-
   function formatTime(time) {
     return time < 10 ? "0" + time : time;
   }
+  const fullDate = {
+    hours: formatTime(time.getHours()),
+    minutes: formatTime(time.getMinutes()),
+    seconds: formatTime(time.getSeconds()),
+    day: formatTime(time.getDay() + 1),
+    month: formatTime(time.getMonth() + 1),
+    year: formatTime(time.getFullYear() + 1),
+  };
+  //console.log(fullDate.hours);
+
+  // const hours = formatTime(time.getHours());
+  // const minutes = formatTime(time.getMinutes());
+  // const seconds = formatTime(time.getSeconds());
+  // const day = formatTime(time.getDay() + 1);
+  // const month = formatTime(time.getMonth() + 1);
+  // const year = formatTime(time.getFullYear());
 
   return (
     <>
       <div className="hour">
-        {hours}:{minutes}:{seconds} <br />
-        {day}/{month}/{year}
+        {fullDate.hours}:{fullDate.minutes}:{fullDate.seconds} <br />
+        {fullDate.day}/{fullDate.month}/{fullDate.year}
       </div>
     </>
   );
