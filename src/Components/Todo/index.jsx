@@ -1,5 +1,7 @@
 import "../../index.css";
 import React, { useState } from "react";
+import ClayButton from "@clayui/button";
+import ClayCard from "@clayui/card";
 
 function Todo() {
   const [items, setItems] = useState([]);
@@ -36,16 +38,22 @@ function Todo() {
           />
         </form>
       </div>
-      <div className="remove">
+      <div>
         <ul>
           {items &&
             items.map((item, index) => (
               <li key={index}>
-                <button type="button" onClick={() => handleRemove(index)}>
-                  <div className="closeToDo">{`❌ `}</div>
-                </button>
-                <span> </span>
-                {item}
+                <div className="col-md-5">
+                  <ClayCard className="bg-color:#fff">
+                    <ClayCard.Body>
+                      <ClayButton onClick={() => handleRemove(index)}>
+                        ❌
+                      </ClayButton>
+                      <span> </span>
+                      {item}
+                    </ClayCard.Body>
+                  </ClayCard>
+                </div>
               </li>
             ))}
         </ul>

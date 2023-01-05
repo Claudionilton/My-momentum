@@ -1,17 +1,22 @@
+import ClayCard from "@clayui/card";
+import ClayButton from "@clayui/button/lib/Group";
+
 function Git() {
   return (
-    <div>
-      <form action="">
-        <button>Search</button>
-        <input type="text" placeholder="Git" />
-      </form>
-      <ul>
-        <li>Teste 1</li>
-        <li>Teste 2</li>
-        <li>Teste 3</li>
-        <li>Teste 4</li>
-        <li>Teste 5</li>
-      </ul>
+    <div className="col-md-5">
+      <ClayCard>
+        <ClayCard.Body>
+          <ClayCard.Description displayType="title">
+            {"Card Title"}
+          </ClayCard.Description>
+          <ClayCard.Description truncate={false} displayType="text">
+            {
+              "Some quick example text to build on the card title and make up the bulk of the card content."
+            }
+          </ClayCard.Description>
+          <ClayButton>{"Go somewhere"}</ClayButton>
+        </ClayCard.Body>
+      </ClayCard>
     </div>
   );
 }

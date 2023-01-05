@@ -6,7 +6,7 @@ import Git from "../FetchGit";
 const Body = () => {
   return (
     <div
-      className="body text-blue-600 "
+      className="bodyProject"
       style={{
         backgroundImage: "url('https://picsum.photos/1920')",
         backgroundRepeat: "no-repeat",

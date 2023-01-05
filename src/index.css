@@ -1,11 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.body {
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.bodyProject {
   display: flex;
   height: 100vh;
   justify-content: space-around;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .gitCard {
@@ -31,16 +37,11 @@
   border-radius: 6%;
   padding: 15px;
 }
-.closeTodo {
-}
 
 .textAreaTodo {
   padding: 3px;
 }
-.remove {
-  background-color: #fff;
-  margin: 10px;
-}
+
 .watch {
   display: flex;
   justify-content: center;
